@@ -1,0 +1,131 @@
+原始任务数据结构：
+
+
+
+
+***************创建任务结构********************
+task_list={
+	"id":(str),
+	"ovs_link":(list),
+	"ovs_tube_link":(list),
+	"ovs_list":(list),
+	"host_list":(list),
+	"operate":(dict),
+	"state":(str)
+}
+
+ovs_link=[[关系2],[关系3],[关系4],[关系5]]
+
+ovs_tube_link=[[关系2],[关系3]]
+
+ovs_list=[ovs_info1,ovs_info2]
+
+ovs_info={
+	'OVS_ID':(str)
+	'OVS_Name':(str)
+	'OVS_IP':(str)
+	'OVS_HOST_IP':(str)
+	'OVS_Start_Ip':(str)
+	'OVS_End_Ip':(str)
+	'OVS_Docker_Num':(int)
+	'OVS_Mask':(str)
+	'OVS_BroadCast':(str)
+	'OVS_DNS':''(str)
+	'OVS_State':(str)
+	'OVS_Image':(str)
+}
+
+
+***************执行任务结构********************
+
+
+execute={
+	"host":(str),
+	"version":(str),
+	"docker_list":(str),     #待执行容器名
+	"cmd":(str),      #待执行命令
+	"docker_num":(int)
+}
+	
+
+task_list={
+	"id":(str),
+	"operate":{
+		"type":"execute"
+		"operation":execute列表
+	},
+	"state":""
+}
+
+
+
+
+
+***************删除任务结构********************
+task_list={
+	"id":(str),
+	"operate":{
+		"type":"delete",     #操作类型
+		"operation":{
+			"ovs_list":list,
+			"docker_list":list
+		}
+	},
+	"state":""
+}
+docker_list=[
+	{
+	"version":(str),
+	"name":(str),
+	"host":(str),
+	}
+
+]
+ovs_list=[ovs_id1,ovs_id2.......]
+
+
+
+host_list=[主机1,主机2,主机3]
+
+
+host_info={
+	"host_id":(str),
+	"ip":(str),
+	"docker_version":(str),
+	"mem":(str),
+	"cpu":(str),
+	"docker_max_num":(int)
+}
+
+
+
+
+
+数据库结构：
+
+docker_list=[
+	docker1,docker2,.......dockerX
+]
+
+
+dockerX={
+	"create_num":(int),      #创建个数
+	"name_pro":(str),     #待创建容器前缀名
+	"image":(str),    #选择镜像名称或id
+	"start_ip":(str),
+	"end_ip":(str),
+	"link_ovs":0,
+}
+
+
+***************ip记录表********************
+
+ip_start={
+	"start":"10.0.0.1"
+}
+
+ip_remain={
+	"start_ip":(str), 
+	"end_ip":(str), 
+	"mask":(int)
+}

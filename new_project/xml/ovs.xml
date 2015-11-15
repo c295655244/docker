@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ovs>
+	<node>
+		<ovs_define ovs_id="1">
+			<ovs_name>交换机1</ovs_name>
+			<docker_num>2</docker_num>
+			<docker_image>ubuntu:14.04</docker_image>
+		</ovs_define>
+
+
+		<ovs_define ovs_id="2" >
+			<ovs_name>交换机2</ovs_name>
+			<docker_num>0</docker_num>
+			<docker_image>ubuntu:14.04</docker_image>
+		</ovs_define>
+
+
+		<ovs_define ovs_id="3">
+			<ovs_name>交换机3</ovs_name>
+			<docker_num>3</docker_num>
+			<docker_image>ubuntu:14.04</docker_image>
+		</ovs_define>
+
+		<ovs_define ovs_id="4">
+			<ovs_name>交换机4</ovs_name>
+			<docker_num>6</docker_num>
+			<docker_image>ubuntu:14.04</docker_image>
+		</ovs_define>
+
+	</node>
+
+	<relation>
+		<ovs-ovs>
+			<point1>1</point1>
+			<point2>2</point2>
+		</ovs-ovs>
+
+		<ovs-ovs>
+			<point1>3</point1>
+			<point2>2</point2>
+		</ovs-ovs>
+
+
+		<ovs-ovs>
+			<point1>4</point1>
+			<point2>2</point2>
+		</ovs-ovs>
+
+	</relation>
+</ovs>

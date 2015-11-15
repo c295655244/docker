@@ -1,0 +1,30 @@
+'''
+OVS table
+OVS={
+	OVS_ID:1
+	OVS_Name:'s1'
+}
+
+OVS_Link table
+	[OVS]{2}
+}
+
+OVS_IP allocate table
+OVS_IP={
+	OVS_ID:number
+	OVS_Name:'s1'
+	OVS_IP:'10.0.0.1'
+	OVS_Start_Ip:'10.0.0.2'
+	OVS_End_Ip:'10.0.0.254'
+	Ovs_Docker_Num:3
+	OVS_Mask:'255.255.255.0'
+	OVS_BroadCast:'10.0.0.255'
+	OVS_DNS:''
+}
+
+topo table 
+Topo={
+	Topo_id:1
+	[OVS_Ip:OVS_IP]
+	[OVS_LINK:OVS_Link]
+}

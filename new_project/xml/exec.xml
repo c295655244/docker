@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exec>
+	<exec_docker>
+		<command>ifconfig</command>
+		<docker_num>2</docker_num>
+		<docker_list>
+			<docker_id>10</docker_id>
+			<docker_id>11</docker_id>
+		</docker_list>
+	</exec_docker>
+	<exec_docker>
+		<command>ps -ax</command>
+		<docker_num>2</docker_num>
+		<docker_list>
+			<docker_id>10</docker_id>
+			<docker_id>11</docker_id>
+		</docker_list>
+	</exec_docker>
+</exec>
